@@ -14,17 +14,15 @@ class MainActivity : BaseActivity() {
         setContentView(R.layout.activity_main)
 
         setHeaderTitle(getString(R.string.main_title))
-
-
+        
+        
+        val infosButton=findViewById<Button>(R.id.infosButton)
+        infosButton.setOnClickListener(View.OnClickListener {
+            val newIntent = Intent(application, StudentOnlineActivity::class.java)
+            startActivity(newIntent)
+        })
 
         /**
-        val button=findViewById<Button>(R.id.buttonNature)
-        button.setOnClickListener(View.OnClickListener {
-            val url="https://res.cloudinary.com/comdev/image/upload/v1661506068/LOGO_EPSI_83d9a4653e.png"
-            val title=getString(R.string.title_nature)
-            showDetailsActivity(url,title)
-            Log.i("Epsi G1","Show Details Activity")
-        })
 
         val buttonEspace=findViewById<Button>(R.id.buttonEspace)
         buttonEspace.setOnClickListener(View.OnClickListener {

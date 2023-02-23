@@ -9,7 +9,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
-/**
+
 class StudentAdapter (val students: ArrayList<Student>):RecyclerView.Adapter<StudentAdapter.ViewHolder>() {
 
     class ViewHolder(view:View) :RecyclerView.ViewHolder(view){
@@ -45,4 +45,3 @@ class StudentAdapter (val students: ArrayList<Student>):RecyclerView.Adapter<Stu
         return students.size
     }
 }
-**/

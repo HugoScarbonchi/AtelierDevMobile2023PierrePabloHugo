@@ -9,7 +9,7 @@ import org.json.JSONObject
 
 class StudentOnlineActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        /**
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_student_online)
         showBack()
@@ -61,8 +61,5 @@ class StudentOnlineActivity : BaseActivity() {
             }
 
         })
-
-**/
-
     }
 }
