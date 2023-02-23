@@ -1,11 +1,74 @@
 package com.epsi.atelierdevmobile2023pierrepablohugo
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.View
+import android.widget.Button
+import android.widget.TextView
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        (application as EpsiApplication).showToast("Hi Epsi")
+
+        setHeaderTitle(getString(R.string.main_title))
+
+        val button=findViewById<Button>(R.id.buttonNature)
+        button.setOnClickListener(View.OnClickListener {
+            val url="https://res.cloudinary.com/comdev/image/upload/v1661506068/LOGO_EPSI_83d9a4653e.png"
+            val title=getString(R.string.title_nature)
+            showDetailsActivity(url,title)
+            Log.i("Epsi G1","Show Details Activity")
+        })
+
+        val buttonEspace=findViewById<Button>(R.id.buttonEspace)
+        buttonEspace.setOnClickListener(View.OnClickListener {
+            val url="https://img.freepik.com/photos-gratuite/rendu-3d-fond-espace-planetes-abstraites-nebuleuse_1048-12994.jpg?w=740&t=st=1673970224~exp=1673970824~hmac=5db29203b7bcddbecb50f50b6bab3920b729055ce5b87aaccc3260362a801f19"
+            val title=getString(R.string.title_espace)
+            showDetailsActivity(url,title)
+            Log.i("Epsi G1","Show Details Activity")
+        })
+
+        val buttonLogin=findViewById<Button>(R.id.buttonLogin)
+        buttonLogin.setOnClickListener(View.OnClickListener {
+            val newIntent = Intent(application, LoginActivity::class.java)
+            startActivity(newIntent)
+        })
+        val buttonSignup=findViewById<Button>(R.id.buttonSignup)
+        buttonSignup.setOnClickListener(View.OnClickListener {
+            val newIntent = Intent(application, SignUpActivity::class.java)
+            startActivity(newIntent)
+        })
+
+        val buttonStudents=findViewById<Button>(R.id.buttonStudents)
+        buttonStudents.setOnClickListener(View.OnClickListener {
+            val newIntent = Intent(application, StudentsActivity::class.java)
+            startActivity(newIntent)
+        })
+
+        val buttonStudentsWs=findViewById<Button>(R.id.buttonStudentsWs)
+        buttonStudentsWs.setOnClickListener(View.OnClickListener {
+            val newIntent = Intent(application, StudentOnlineActivity::class.java)
+            startActivity(newIntent)
+        })
+
+
+        val buttonTabbar=findViewById<Button>(R.id.buttonTabbar)
+        buttonTabbar.setOnClickListener(View.OnClickListener {
+            val newIntent = Intent(application, TabbarActivity::class.java)
+            startActivity(newIntent)
+        })
+
+    }
+
+    private fun showDetailsActivity(url:String,tilte:String) {
+        val newIntent = Intent(application, DetailsActivity::class.java)
+        newIntent.putExtra("url", url)
+        newIntent.putExtra("title", tilte)
+        startActivity(newIntent)
     }
 }
