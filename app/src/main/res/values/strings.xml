@@ -7,6 +7,9 @@
     <string name="btn_text_students_ws">Students Online</string>
 
 
+    <string name="title_infos">Infos</string>
+    <string name="title_produits">Produits</string>
+
     <string name="title_nature">Nature</string>
     <string name="title_espace">Espace</string>
     <string name="title_students">Students</string>

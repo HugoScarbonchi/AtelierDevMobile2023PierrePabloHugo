@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import org.json.JSONObject
 
 class StudentsActivity : BaseActivity() {
+    /**
     val data="{\n" +
             "  \"items\": [\n" +
             "    {\n" +
@@ -51,10 +52,10 @@ class StudentsActivity : BaseActivity() {
             "    }\n" +
             "  ]\n" +
             "}"
+**/
 
 
-
-
+/**
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_students)
@@ -82,4 +83,5 @@ class StudentsActivity : BaseActivity() {
         recyclerviewStudents.adapter=studentAdapter
 
     }
+    **/
 }

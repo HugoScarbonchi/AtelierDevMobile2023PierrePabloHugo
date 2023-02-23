@@ -13,10 +13,11 @@ class MainActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        (application as EpsiApplication).showToast("Hi Epsi")
-
         setHeaderTitle(getString(R.string.main_title))
 
+
+
+        /**
         val button=findViewById<Button>(R.id.buttonNature)
         button.setOnClickListener(View.OnClickListener {
             val url="https://res.cloudinary.com/comdev/image/upload/v1661506068/LOGO_EPSI_83d9a4653e.png"
@@ -39,13 +40,15 @@ class MainActivity : BaseActivity() {
             startActivity(newIntent)
         })
 
-
+        **/
     }
 
+    /**
     private fun showDetailsActivity(url:String,tilte:String) {
         val newIntent = Intent(application, DetailsActivity::class.java)
         newIntent.putExtra("url", url)
         newIntent.putExtra("title", tilte)
         startActivity(newIntent)
     }
+    **/
 }
