@@ -1,22 +1,16 @@
 <resources>
-    <string name="app_name">b3-dev-full-stack-android</string>
+    <string name="app_name">AtelierDevMobile2023PierrePabloHugo</string>
     <string name="btn_text_nature">Nature</string>
     <string name="btn_text_espace">Espace</string>
-    <string name="btn_text_login">Login</string>
     <string name="btn_text_go">Go</string>
-    <string name="btn_text_signup">SignUp</string>
     <string name="btn_text_students">Students</string>
     <string name="btn_text_students_ws">Students Online</string>
-    <string name="btn_text_tabbar">Tabbar</string>
 
 
     <string name="title_nature">Nature</string>
     <string name="title_espace">Espace</string>
-    <string name="title_login">Login</string>
-    <string name="title_signup">SignUp</string>
     <string name="title_students">Students</string>
     <string name="title_students_ws">Students Online</string>
     <string name="main_title">EPSI</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -20,21 +20,11 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAdwxyyyZSkEgW97DZxS6ev2KRpruYeTlQ" />
-
-        <activity
-            android:name=".TabbarActivity"
-            android:exported="false" />
         <activity
             android:name=".StudentOnlineActivity"
             android:exported="false" />
         <activity
             android:name=".StudentsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".SignUpActivity"
-            android:exported="false" />
-        <activity
-            android:name=".LoginActivity"
             android:exported="false" />
         <activity
             android:name=".SplashActivity"

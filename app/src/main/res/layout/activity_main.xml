@@ -32,28 +32,9 @@
                 android:text="@string/btn_text_espace" />
 
             <Button
-                android:id="@+id/buttonLogin"
-                style="@style/EpsiButton"
-                android:text="@string/btn_text_login" />
-
-            <Button
-                android:id="@+id/buttonSignup"
-                style="@style/EpsiButton"
-                android:text="@string/btn_text_signup" />
-            <Button
-                android:id="@+id/buttonStudents"
-                style="@style/EpsiButton"
-                android:text="@string/btn_text_students" />
-
-            <Button
                 android:id="@+id/buttonStudentsWs"
                 style="@style/EpsiButton"
                 android:text="@string/btn_text_students_ws" />
-
-            <Button
-                android:id="@+id/buttonTabbar"
-                style="@style/EpsiButton"
-                android:text="@string/btn_text_tabbar" />
 
 
         </LinearLayout>

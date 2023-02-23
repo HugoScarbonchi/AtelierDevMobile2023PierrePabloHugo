@@ -33,35 +33,12 @@ class MainActivity : BaseActivity() {
             Log.i("Epsi G1","Show Details Activity")
         })
 
-        val buttonLogin=findViewById<Button>(R.id.buttonLogin)
-        buttonLogin.setOnClickListener(View.OnClickListener {
-            val newIntent = Intent(application, LoginActivity::class.java)
-            startActivity(newIntent)
-        })
-        val buttonSignup=findViewById<Button>(R.id.buttonSignup)
-        buttonSignup.setOnClickListener(View.OnClickListener {
-            val newIntent = Intent(application, SignUpActivity::class.java)
-            startActivity(newIntent)
-        })
-
-        val buttonStudents=findViewById<Button>(R.id.buttonStudents)
-        buttonStudents.setOnClickListener(View.OnClickListener {
-            val newIntent = Intent(application, StudentsActivity::class.java)
-            startActivity(newIntent)
-        })
-
         val buttonStudentsWs=findViewById<Button>(R.id.buttonStudentsWs)
         buttonStudentsWs.setOnClickListener(View.OnClickListener {
             val newIntent = Intent(application, StudentOnlineActivity::class.java)
             startActivity(newIntent)
         })
 
-
-        val buttonTabbar=findViewById<Button>(R.id.buttonTabbar)
-        buttonTabbar.setOnClickListener(View.OnClickListener {
-            val newIntent = Intent(application, TabbarActivity::class.java)
-            startActivity(newIntent)
-        })
 
     }
 
