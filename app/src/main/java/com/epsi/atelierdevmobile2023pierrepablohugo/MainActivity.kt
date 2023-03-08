@@ -22,6 +22,13 @@ class MainActivity : BaseActivity() {
             startActivity(newIntent)
         })
 
+        val productsButton = findViewById<Button>(R.id.productsButton)
+        productsButton.setOnClickListener(View.OnClickListener {
+            val vue = Intent(application, RayonsActivity::class.java)
+            startActivity(vue)
+        })
+
+
         /**
 
         val buttonEspace=findViewById<Button>(R.id.buttonEspace)

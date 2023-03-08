@@ -24,6 +24,9 @@
             android:name=".StudentOnlineActivity"
             android:exported="false" />
         <activity
+            android:name=".RayonsActivity"
+            android:exported="false"/>
+        <activity
             android:name=".StudentsActivity"
             android:exported="false" />
         <activity
