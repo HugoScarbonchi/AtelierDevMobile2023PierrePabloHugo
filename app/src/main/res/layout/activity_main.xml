@@ -44,17 +44,114 @@
                 android:text="Nous allons pouvoir tester nos compétences et voir si toutes les fonctionnalités sont maitrisées"
                 style="@style/Content"/>
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/infosButton"
+            <LinearLayout
+                android:id="@+id/buttonsLayout"
+                android:orientation="horizontal"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="infos" />
+                android:layout_height="wrap_content">
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/productsButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="produits" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/infoButton"
+                    android:orientation="vertical"
+                    android:layout_weight="0.5"
+                    android:layout_margin="8dp"
+                    android:padding="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/info_button_background"
+                    android:clickable="true">
+
+                    <TextView
+                        android:id="@+id/infoTitle"
+                        style="@style/HomeButtonTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Infos"
+                        app:layout_constraintBottom_toTopOf="@+id/infoContent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/infoContent"
+                        style="@style/HomeButtonContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="Voir les etudiants et leurs informations"
+                        app:layout_constraintBottom_toTopOf="@+id/info_icon"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/infoTitle" />
+
+                    <ImageView
+                        android:id="@+id/info_icon"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/infoContent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/productButton"
+                    android:orientation="vertical"
+                    android:layout_weight="0.5"
+                    android:layout_margin="8dp"
+                    android:padding="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/info_button_background"
+                    android:clickable="true">
+
+                    <TextView
+                        android:id="@+id/productTitle"
+                        style="@style/HomeButtonTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Produits"
+                        app:layout_constraintBottom_toTopOf="@+id/productContent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/productContent"
+                        style="@style/HomeButtonContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="Trouver les produits et voir les details"
+                        app:layout_constraintBottom_toTopOf="@+id/product_icon"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/productTitle" />
+
+                    <ImageView
+                        android:id="@+id/product_icon"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/productContent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
         </androidx.appcompat.widget.LinearLayoutCompat>
 
     </ScrollView>

@@ -11,37 +11,25 @@ import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 
 class StudentAdapter (val students: ArrayList<Student>):RecyclerView.Adapter<StudentAdapter.ViewHolder>() {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_student, parent, false)
 
-    class ViewHolder(view:View) :RecyclerView.ViewHolder(view){
-        val textViewName = view.findViewById<TextView>(R.id.textViewName)
-        val textViewEmail = view.findViewById<TextView>(R.id.textViewEmail)
-        val textViewCity = view.findViewById<TextView>(R.id.textViewCity)
-        val textViewZipcode = view.findViewById<TextView>(R.id.textViewZipcode)
-        val textViewPhone = view.findViewById<TextView>(R.id.textViewPhone)
-        val imageViewStudent = view.findViewById<ImageView>(R.id.imageViewStudent)
-        val layoutContent= view.findViewById<LinearLayout>(R.id.layoutContent)
-    }
-
-    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(viewGroup.context)
-            .inflate(R.layout.cell_student, viewGroup, false)
         return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val student = students.get(position)
-        holder.textViewName.text=student.name
-        holder.textViewEmail.text=student.email
-        holder.textViewCity.text=student.city
-        holder.textViewZipcode.text=student.zipcode
-        holder.textViewPhone.text=student.phone
-        Picasso.get().load(student.imgUrl).into(holder.imageViewStudent)
-        holder.layoutContent.setOnClickListener(View.OnClickListener {
-            Toast.makeText(holder.layoutContent.context,student.name,Toast.LENGTH_SHORT).show()
-        })
+        val student = students[position]
+        holder.name.text = student.name
+
     }
 
     override fun getItemCount(): Int {
         return students.size
     }
+
+    class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
+        val name = itemView.findViewById(R.id.name) as TextView
+    }
+
 }

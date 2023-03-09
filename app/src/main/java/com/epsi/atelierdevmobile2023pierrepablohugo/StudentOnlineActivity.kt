@@ -47,10 +47,9 @@ class StudentOnlineActivity : BaseActivity() {
                         val student = Student(
                             js.optString("name", "not found"),
                             js.optString("email", "not found"),
-                            js.optString("phone", "not found"),
-                            js.optString("city", "not found"),
-                            js.optString("zipcode", "not found"),
-                            js.optString("picture_url", url)
+                            js.optString("group", "not found"),
+                            js.optString("description", "not found"),
+                            js.optString("imgUrl", "not found")
                         )
                         students.add(student)
                         runOnUiThread(Runnable {
