@@ -15,6 +15,8 @@ class RayonAdapter (val rayons: ArrayList<Rayon>):RecyclerView.Adapter<RayonAdap
     class ViewHolder(view:View) :RecyclerView.ViewHolder(view){
         val textViewId = view.findViewById<TextView>(R.id.textViewId)
         val textViewNom = view.findViewById<TextView>(R.id.textViewNom)
+        val layoutContent= view.findViewById<LinearLayout>(R.id.layoutContent)
+
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
@@ -27,6 +29,9 @@ class RayonAdapter (val rayons: ArrayList<Rayon>):RecyclerView.Adapter<RayonAdap
         val rayon = rayons.get(position)
         holder.textViewId.text=rayon.id
         holder.textViewNom.text=rayon.title
+        holder.layoutContent.setOnClickListener(View.OnClickListener {
+            Toast.makeText(holder.layoutContent.context,rayon.title,Toast.LENGTH_SHORT).show()
+        })
     }
 
     override fun getItemCount(): Int {
