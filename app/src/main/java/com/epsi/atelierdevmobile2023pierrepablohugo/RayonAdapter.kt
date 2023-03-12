@@ -1,5 +1,6 @@
 package com.epsi.atelierdevmobile2023pierrepablohugo
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,7 +17,6 @@ class RayonAdapter (val rayons: ArrayList<Rayon>):RecyclerView.Adapter<RayonAdap
         val textViewId = view.findViewById<TextView>(R.id.textViewId)
         val textViewNom = view.findViewById<TextView>(R.id.textViewNom)
         val layoutContent= view.findViewById<LinearLayout>(R.id.layoutContent)
-
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
@@ -30,7 +30,14 @@ class RayonAdapter (val rayons: ArrayList<Rayon>):RecyclerView.Adapter<RayonAdap
         holder.textViewId.text=rayon.id
         holder.textViewNom.text=rayon.title
         holder.layoutContent.setOnClickListener(View.OnClickListener {
-            Toast.makeText(holder.layoutContent.context,rayon.title,Toast.LENGTH_SHORT).show()
+            val intent = Intent(holder.layoutContent.context, ProductsActivity::class.java)
+
+            intent.putExtra("rayonId", rayon.id)
+            intent.putExtra("rayonTitle", rayon.title)
+            intent.putExtra("url", rayon.productUrl)
+
+            holder.layoutContent.context.startActivity(intent)
+
         })
     }
 
