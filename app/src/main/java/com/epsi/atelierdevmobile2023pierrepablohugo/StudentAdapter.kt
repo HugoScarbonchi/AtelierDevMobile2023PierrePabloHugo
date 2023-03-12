@@ -25,6 +25,10 @@ class StudentAdapter (val students: ArrayList<Student>):RecyclerView.Adapter<Stu
             val intent = Intent(holder.itemView.context, StudentProfileActivity::class.java)
 
             intent.putExtra("name", student.name)
+            intent.putExtra("email", student.email)
+            intent.putExtra("group", student.group)
+            intent.putExtra("description", student.description)
+            intent.putExtra("imgUrl", student.imgUrl)
 
             holder.itemView.context.startActivity(intent)
         }
