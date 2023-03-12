@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 
@@ -16,7 +17,7 @@ class RayonAdapter (val rayons: ArrayList<Rayon>):RecyclerView.Adapter<RayonAdap
     class ViewHolder(view:View) :RecyclerView.ViewHolder(view){
         val textViewId = view.findViewById<TextView>(R.id.textViewId)
         val textViewNom = view.findViewById<TextView>(R.id.textViewNom)
-        val layoutContent= view.findViewById<LinearLayout>(R.id.layoutContent)
+        val layoutContent= view.findViewById<ConstraintLayout>(R.id.layoutContent)
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {

@@ -8,7 +8,7 @@
     android:background="@color/primary_color"
     tools:context=".StudentsActivity">
     <include
-        layout="@layout/layout_header"
+        layout="@layout/layout_header_details"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -27,14 +27,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="16dp"
-                android:text="Listes de étudiants de l’EPSI 🎓"
+                android:text="@string/info_title"
                 style="@style/Title"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
-                android:text="Retrouvez la liste et consulter les details"
+                android:text="@string/info_subtitle"
                 style="@style/SubTitle"/>
 
             <androidx.recyclerview.widget.RecyclerView

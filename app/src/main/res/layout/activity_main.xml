@@ -30,14 +30,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="16dp"
-                android:text="Bienvenue sur notre première app mobile 👋🏼"
+                android:text="@string/home_title"
                 style="@style/Title"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
-                android:text="Nous allons pouvoir tester nos compétences et voir si toutes les fonctionnalités sont maitrisées"
+                android:text="@string/home_subtitle"
                 style="@style/SubTitle"/>
 
             <LinearLayout
@@ -67,7 +67,7 @@
                         android:layout_gravity="left"
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
-                        android:text="Infos"
+                        android:text="@string/title_students"
                         app:layout_constraintBottom_toTopOf="@+id/infoContent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -79,7 +79,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:layout_marginEnd="8dp"
-                        android:text="Voir les etudiants et leurs informations"
+                        android:text="@string/cta_infos"
                         app:layout_constraintBottom_toTopOf="@+id/info_icon"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -117,7 +117,7 @@
                         android:layout_gravity="left"
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
-                        android:text="Produits"
+                        android:text="@string/title_produits"
                         app:layout_constraintBottom_toTopOf="@+id/productContent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -129,7 +129,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:layout_marginEnd="8dp"
-                        android:text="Trouver les produits et voir les details"
+                        android:text="@string/cta_products"
                         app:layout_constraintBottom_toTopOf="@+id/product_icon"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"

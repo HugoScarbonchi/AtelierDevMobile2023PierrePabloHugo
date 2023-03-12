@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 
@@ -18,7 +19,7 @@ class ProductsAdapter (val products: ArrayList<Product>): RecyclerView.Adapter<P
         val textViewNom = view.findViewById<TextView>(R.id.textViewNomProduct)
         val textViewDesc = view.findViewById<TextView>(R.id.textViewDescProduct)
         val imgViewImg = view.findViewById<ImageView>(R.id.imageViewProduct)
-        val layoutContent= view.findViewById<LinearLayout>(R.id.layoutContent)
+        val layoutContent= view.findViewById<ConstraintLayout>(R.id.layoutContent)
 
         init {
             textViewDesc.maxLines = 2

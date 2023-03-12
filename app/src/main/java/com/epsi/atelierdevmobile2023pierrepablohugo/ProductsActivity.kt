@@ -1,6 +1,7 @@
 package com.epsi.atelierdevmobile2023pierrepablohugo
 
 import android.os.Bundle
+import android.util.DisplayMetrics
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
