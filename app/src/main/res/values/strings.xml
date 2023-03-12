@@ -6,12 +6,6 @@
     <string name="btn_text_students">Students</string>
     <string name="btn_text_students_ws">Students Online</string>
 
-    <string name="title_main">Bienvenue sur notre première app mobile 👋🏼</string>
-    <string name="subtitle_main">Nous allons pouvoir tester nos compétences et voir si toutes les fonctionnalités sont maitrisées</string>
-
-    <string name="title_student">Listes de étudiants de l’EPSI 🎓</string>
-    <string name="subtitle_student">Retrouvez la liste et consulter les details</string>
-
 
     <string name="title_infos">Infos</string>
     <string name="title_rayons">Rayons</string>

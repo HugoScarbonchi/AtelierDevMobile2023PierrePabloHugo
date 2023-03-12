@@ -32,15 +32,16 @@
                 android:src="@drawable/ic_home" />
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/title_main"
+                android:text="Bienvenue sur notre première app"
                 style="@style/SubTitle"/>
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/subtitle_main"
+                android:layout_marginHorizontal="32dp"
+                android:text="Nous allons pouvoir tester nos compétences et voir si toutes les fonctionnalités sont maitrisées"
                 style="@style/Content"/>
 
             <LinearLayout
