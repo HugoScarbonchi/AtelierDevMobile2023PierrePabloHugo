@@ -1,9 +1,13 @@
 package com.epsi.atelierdevmobile2023pierrepablohugo
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import com.squareup.picasso.Picasso
+
 
 class StudentProfileActivity : BaseActivity() {
 
@@ -26,6 +30,12 @@ class StudentProfileActivity : BaseActivity() {
         findViewById<TextView>(R.id.description).text = student.description
 
         Picasso.get().load(imgUrl).into(findViewById<ImageView>(R.id.profilePicture))
+
+        findViewById<ConstraintLayout>(R.id.goEpsi).setOnClickListener {
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("http://www.epsi.fr"))
+            startActivity(browserIntent)
+        }
+
 
     }
 }
