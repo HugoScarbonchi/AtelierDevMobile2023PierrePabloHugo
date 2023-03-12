@@ -1,14 +1,13 @@
 package com.epsi.atelierdevmobile2023pierrepablohugo
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.TextView
-import android.widget.Toast
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.squareup.picasso.Picasso
 
 class StudentAdapter (val students: ArrayList<Student>):RecyclerView.Adapter<StudentAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -22,6 +21,13 @@ class StudentAdapter (val students: ArrayList<Student>):RecyclerView.Adapter<Stu
         val student = students[position]
         holder.name.text = student.name
 
+        holder.itemView.setOnClickListener {
+            val intent = Intent(holder.itemView.context, StudentProfileActivity::class.java)
+
+            intent.putExtra("name", student.name)
+
+            holder.itemView.context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {

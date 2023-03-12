@@ -21,7 +21,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAdwxyyyZSkEgW97DZxS6ev2KRpruYeTlQ" />
         <activity
-            android:name=".StudentOnlineActivity"
+            android:name=".StudentProfileActivity"
             android:exported="false" />
         <activity
             android:name=".RayonsActivity"
