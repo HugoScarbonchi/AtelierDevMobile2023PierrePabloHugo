@@ -19,7 +19,7 @@ class MainActivity : BaseActivity() {
         //info button recuperation and click event listener
         val infosButton=findViewById<ConstraintLayout>(R.id.infoButton)
         infosButton.setOnClickListener(View.OnClickListener {
-            val newIntent = Intent(application, StudentOnlineActivity::class.java)
+            val newIntent = Intent(application, StudentsActivity::class.java)
             startActivity(newIntent)
         })
 

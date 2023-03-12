@@ -25,30 +25,28 @@
             android:orientation="vertical"
             android:gravity="center">
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="wrap_content"
-                android:layout_height="192dp"
-                android:layout_marginTop="32dp"
-                android:src="@drawable/ic_home" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Bienvenue sur notre première app mobile 👋🏼"
+                style="@style/Title"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Bienvenue sur notre première app"
-                style="@style/SubTitle"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="32dp"
+                android:layout_marginHorizontal="16dp"
                 android:text="Nous allons pouvoir tester nos compétences et voir si toutes les fonctionnalités sont maitrisées"
-                style="@style/Content"/>
+                style="@style/SubTitle"/>
 
             <LinearLayout
                 android:id="@+id/buttonsLayout"
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="16dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/infoButton"
