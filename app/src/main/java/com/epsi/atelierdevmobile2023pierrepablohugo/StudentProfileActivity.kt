@@ -1,7 +1,9 @@
 package com.epsi.atelierdevmobile2023pierrepablohugo
 
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.TextView
+import com.squareup.picasso.Picasso
 
 class StudentProfileActivity : BaseActivity() {
 
@@ -22,5 +24,8 @@ class StudentProfileActivity : BaseActivity() {
         findViewById<TextView>(R.id.email).text = student.email
         findViewById<TextView>(R.id.group).text = student.group
         findViewById<TextView>(R.id.description).text = student.description
+
+        Picasso.get().load(imgUrl).into(findViewById<ImageView>(R.id.profilePicture))
+
     }
 }
